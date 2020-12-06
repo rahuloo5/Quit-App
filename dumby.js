@@ -11,7 +11,7 @@ import {
   Text,
   View,
   StyleSheet,
-
+  useNativeDriver
 } from 'react-native';
 const { width, height } = Dimensions.get('window');
 const colors = {
@@ -183,7 +183,7 @@ const textOpacity = buttonAnimation.interpolate({
           }
           }
           onScroll={Animated.event(
-            [{nativeEvent:{contentOffset:{x:scrollX}}}],
+            [{nativeEvent:{contentoffset:{x:scrollX}}}],
             {useNativeDriver:true}
             )}
             onMomentumScrollEnd={(e)=>{
